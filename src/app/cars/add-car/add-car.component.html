@@ -1,0 +1,26 @@
+<div class="card-panel">
+  <div class="row">
+    <h4>Add new car</h4>
+  </div>
+  <div class="row">
+    <div *ngIf="newCar" class="input-field col s6">
+      <input placeholder=" " id="model" type="text" [(ngModel)]="newCar.model" [ngModelOptions]="{standalone: true}">
+      <label for="model">Model</label>
+    </div>
+      <div *ngIf="newCar" class="input-field col s6">
+      <input placeholder=" " id="manufacture" type="text" [(ngModel)]="newCar.manufacture" [ngModelOptions]="{standalone: true}">
+      <label for="manufacture">Manufacture</label>
+    </div>
+    <div *ngIf="newCar" class="input-field col s6">
+      <input placeholder=" " id="year" type="text" [(ngModel)]="newCar.yearOfConstruction" [ngModelOptions]="{standalone: true}">
+      <label for="year">Year</label>
+    </div>
+    <div class="input-field col s6">
+      <select [(ngModel)]="newCar.owner" id="selectUser" materialize="material_select" [materializeSelectOptions]="users">
+        <option value="No owner">No owner</option>
+        <option *ngFor="let user of users" [value]="user">{{user}}</option>
+      </select>
+    </div>
+    <a class="btn" (click)="addCar()">Submit</a>
+  </div>
+</div>

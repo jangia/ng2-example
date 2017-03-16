@@ -1,0 +1,20 @@
+<table class="bordered highlight">
+  <thead>
+    <tr>
+        <th data-field="model">Model</th>
+        <th data-field="manufacture">Manufacture</th>
+        <th data-field="yearOfConstruction">Year of construction</th>
+      <th data-field="owner">Owner</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let car of cars" (click)="onCarSelect(car)">
+      <td>{{car.model}}</td>
+      <td>{{car.manufacture}}</td>
+      <td>{{car.yearOfConstruction}}</td>
+      <td>{{car.owner}}</td>
+    </tr>
+  </tbody>
+</table>
+

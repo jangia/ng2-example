@@ -1,3 +1,21 @@
-<h1>
-  {{title}}
-</h1>
+<nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo right">Logo</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a [routerLink]="['/']">Home</a></li>
+        <li><a [routerLink]="['/add-car']">Add car</a></li>
+        <li><a [routerLink]="['/add-user']">Add user</a></li>
+        <li><a [routerLink]="['/users-list']">Show users</a></li>
+      </ul>
+    </div>
+  </nav>
+<div class="container">
+  <div class="row">
+    <div class="input-field col s6 offset-s3">
+          <input [(ngModel)]="selectedUser" (ngModelChange)="setUser()" placeholder="" id="first_name" type="text">
+          <label for="first_name">User</label>
+    </div>
+  </div>
+    <router-outlet></router-outlet>
+</div>
+

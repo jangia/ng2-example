@@ -1,0 +1,12 @@
+<div class="card-panel">
+  <div class="row">
+    <h4>Add user</h4>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <input placeholder=" " id="model" type="text" [(ngModel)]="newUser" [ngModelOptions]="{standalone: true}">
+      <label for="model">Name</label>
+    </div>
+    <a class="btn" (click)="addUser()">Submit</a>
+  </div>
+</div>

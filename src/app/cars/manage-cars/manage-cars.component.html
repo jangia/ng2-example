@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col s12 m12 l12 center-align">
+      <app-cars-list
+      (selectCar)="onCarSelect($event)">
+      </app-cars-list>
+    </div>
+    <div *ngIf="selectedCar" class="col s12 m12 l12 center-align">
+      <app-car-details
+        [selectedCar]="selectedCar"></app-car-details>
+    </div>
+  </div>
+</div>
+
